@@ -1,29 +1,58 @@
-# Create T3 App
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+  <h1>Minimal Pokédex</h1>
+  <p>A sleek and minimal Pokédex app built with React and TypeScript, designed to showcase the first 151 Pokémon from the Kanto region. This project fetches data from the PokeAPI and provides a clean, responsive interface for browsing Pokémon details.</p>
+  <pre><code>npm install</code></pre>![Pokedex](https://github.com/user-attachments/assets/3d50ccbb-f3ff-4ac4-a744-7e4425e33a0d)
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+  <h2>Features</h2>
+  <ul>
+    <li><strong>Search Pokémon:</strong> Easily search for Pokémon by name or type.</li>
+    <li><strong>Responsive Design:</strong> Works seamlessly on desktop, tablet, and mobile devices.</li>
+    <li><strong>Pokémon Details:</strong> View detailed stats, abilities, height, weight, and more for each Pokémon.</li>
+    <li><strong>Loading States:</strong> Smooth loading animations while fetching data.</li>
+    <li><strong>Error Handling:</strong> Displays user-friendly error messages if something goes wrong.</li>
+  </ul>
 
-## What's next? How do I make an app with this?
+  <h2>Technologies Used</h2>
+  <ul>
+    <li><strong>React:</strong> For building the user interface.</li>
+    <li><strong>TypeScript:</strong> For type-safe development.</li>
+    <li><strong>Tailwind CSS:</strong> For styling and responsive design.</li>
+    <li><strong>PokeAPI:</strong> For fetching Pokémon data.</li>
+  </ul>
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+  <h2>How to Run Locally</h2>
+  <p>Clone the repository:</p>
+  <pre><code>git clone https://github.com/your-username/minimal-pokedex.git</code></pre>
+  <p>Navigate to the project directory:</p>
+  <pre><code>cd minimal-pokedex</code></pre>
+  <p>Install dependencies:</p>
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+  <p>Start the development server:</p>
+  <pre><code>npm run dev</code></pre>
+  <p>Open your browser and visit <a href="http://localhost:3000">http://localhost:3000</a>.</p>
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+  <h2>Screenshots</h2>
+  <p><strong>Pokédex Screenshot:</strong><br>Example of the Pokédex in action.</p>
 
-## Learn More
+  <h2>Contributing</h2>
+  <p>Contributions are welcome! If you'd like to improve this project, feel free to open an issue or submit a pull request.</p>
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+  <h2>License</h2>
+  <p>This project is licensed under the MIT License. See the LICENSE file for details.</p>
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+  <h2>Why This Works:</h2>
+  <ul>
+    <li><strong>Clear and Concise:</strong> The description is short but covers all the essential details.</li>
+    <li><strong>Highlights Key Features:</strong> It emphasizes what makes your project unique and useful.</li>
+    <li><strong>Easy to Follow:</strong> The "How to Run Locally" section provides clear instructions for others to try your project.</li>
+    <li><strong>Visual Appeal:</strong> Adding a screenshot or GIF makes the README more engaging.</li>
+    <li><strong>Encourages Contributions:</strong> The "Contributing" section invites others to collaborate.</li>
+  </ul>
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
-
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+  <p>Feel free to customize it further to match your project’s style! 😊</p>
+</body>
+</html>
