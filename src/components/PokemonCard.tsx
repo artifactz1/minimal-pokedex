@@ -1,4 +1,5 @@
-import { Pokemon } from "../interfaces/Pokemon";
+import Image from "next/image";
+import type { Pokemon } from "../interfaces/Pokemon";
 
 interface PokemonCardProps {
   pokemon: Pokemon;

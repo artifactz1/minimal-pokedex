@@ -1,12 +1,11 @@
 import { Grid, Maximize, Minimize, X } from "lucide-react";
-import Image from "next/image";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
 } from "~/components/ui/dialog";
-import { Pokemon } from "~/interfaces/Pokemon";
+import type { Pokemon } from "~/interfaces/Pokemon";
 
 interface PokemonDetailsDialogProps {
   pokemon: Pokemon | null;
@@ -30,7 +29,7 @@ export default function PokemonDetailsDialog({
         <div className="p-6">
           <div className="grid grid-cols-2 gap-6">
             <div className="relative aspect-square overflow-hidden border-2 border-black">
-              <Image
+              <img
                 src={pokemon.sprites.front_default}
                 alt={pokemon.name}
                 className="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 transform object-contain"
