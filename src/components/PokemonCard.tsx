@@ -63,25 +63,46 @@ import Image from "next/image";
 import type { Pokemon } from "../interfaces/Pokemon";
 
 // Define type-to-color mapping
+// const typeColors: Record<string, string> = {
+//   grass: "bg-green-500",
+//   fire: "bg-red-500",
+//   water: "bg-blue-500",
+//   electric: "bg-yellow-400",
+//   bug: "bg-lime-500",
+//   normal: "bg-gray-400",
+//   poison: "bg-purple-500",
+//   ground: "bg-yellow-600",
+//   fairy: "bg-pink-400",
+//   fighting: "bg-orange-500",
+//   psychic: "bg-pink-500",
+//   rock: "bg-gray-700",
+//   ghost: "bg-indigo-500",
+//   ice: "bg-cyan-300",
+//   dragon: "bg-indigo-600",
+//   dark: "bg-gray-800",
+//   steel: "bg-gray-500",
+//   flying: "bg-blue-300",
+// };
+
 const typeColors: Record<string, string> = {
-  grass: "bg-green-500",
-  fire: "bg-red-500",
-  water: "bg-blue-500",
-  electric: "bg-yellow-400",
-  bug: "bg-lime-500",
-  normal: "bg-gray-400",
-  poison: "bg-purple-500",
-  ground: "bg-yellow-600",
-  fairy: "bg-pink-400",
-  fighting: "bg-orange-500",
-  psychic: "bg-pink-500",
-  rock: "bg-gray-700",
-  ghost: "bg-indigo-500",
-  ice: "bg-cyan-300",
-  dragon: "bg-indigo-600",
-  dark: "bg-gray-800",
-  steel: "bg-gray-500",
-  flying: "bg-blue-300",
+  grass: "bg-emerald-700", // Deep forest green
+  fire: "bg-amber-700", // Burnt orange
+  water: "bg-teal-700", // Dark teal
+  electric: "bg-yellow-600", // Mustard yellow
+  bug: "bg-lime-700", // Olive green
+  normal: "bg-stone-500", // Muted gray-brown
+  poison: "bg-purple-800", // Dark purple
+  ground: "bg-yellow-800", // Earthy brown
+  fairy: "bg-rose-600", // Dusty rose
+  fighting: "bg-red-800", // Deep brick red
+  psychic: "bg-fuchsia-700", // Muted magenta
+  rock: "bg-stone-700", // Dark rock gray
+  ghost: "bg-indigo-900", // Deep midnight blue
+  ice: "bg-sky-700", // Muted ice blue
+  dragon: "bg-indigo-800", // Deep royal blue
+  dark: "bg-neutral-800", // Charcoal
+  steel: "bg-gray-600", // Slate gray
+  flying: "bg-sky-800", // Stormy sky blue
 };
 
 interface PokemonCardProps {
