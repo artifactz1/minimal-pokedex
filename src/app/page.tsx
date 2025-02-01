@@ -14,9 +14,8 @@ export default function HomePage() {
   const [error, setError] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedPokemon, setSelectedPokemon] = useState<Pokemon | null>(null);
-  const [selectedType, setSelectedType] = useState("all")
-  const [sortBy, setSortBy] = useState("id")
-
+  const [selectedType, setSelectedType] = useState("all");
+  const [sortBy, setSortBy] = useState("id");
 
   useEffect(() => {
     const fetchPokemon = async () => {
@@ -76,30 +75,34 @@ export default function HomePage() {
   // };
 
   useEffect(() => {
-    let filteredPokemon = allPokemon
+    let filteredPokemon = allPokemon;
 
     if (selectedType !== "all") {
-      filteredPokemon = filteredPokemon.filter((poke) => poke.types.some((type) => type.type.name === selectedType))
+      filteredPokemon = filteredPokemon.filter((poke) =>
+        poke.types.some((type) => type.type.name === selectedType),
+      );
     }
 
     filteredPokemon = filteredPokemon.filter(
       (poke) =>
         poke.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        poke.types.some((type) => type.type.name.toLowerCase().includes(searchTerm.toLowerCase())),
-    )
+        poke.types.some((type) =>
+          type.type.name.toLowerCase().includes(searchTerm.toLowerCase()),
+        ),
+    );
 
     if (sortBy === "name") {
-      filteredPokemon.sort((a, b) => a.name.localeCompare(b.name))
+      filteredPokemon.sort((a, b) => a.name.localeCompare(b.name));
     } else {
-      filteredPokemon.sort((a, b) => a.id - b.id)
+      filteredPokemon.sort((a, b) => a.id - b.id);
     }
 
-    setDisplayedPokemon(filteredPokemon)
-  }, [searchTerm, allPokemon, selectedType, sortBy])
+    setDisplayedPokemon(filteredPokemon);
+  }, [searchTerm, allPokemon, selectedType, sortBy]);
 
   const handleCardClick = (pokemon: Pokemon) => {
-    setSelectedPokemon(pokemon)
-  }
+    setSelectedPokemon(pokemon);
+  };
 
   if (error) {
     return <div className="text-center text-red-500">{error}</div>;
@@ -107,10 +110,17 @@ export default function HomePage() {
 
   return (
     <div className="container mx-auto p-4 font-sans">
-      <h1 className="mb-8 text-center text-4xl font-bold uppercase tracking-wide">
-        Pokédex
+      <h1 className="my-8 text-center text-4xl font-bold uppercase tracking-wide">
+        MINIMAL Pokédex
       </h1>
-      <SearchBar searchTerm={searchTerm} onSearchTermChange={setSearchTerm} selectedType={selectedType} onSelectTypeChange={setSelectedType} sortBy={sortBy} onSetSortByChange={setSortBy}/>
+      <SearchBar
+        searchTerm={searchTerm}
+        onSearchTermChange={setSearchTerm}
+        selectedType={selectedType}
+        onSelectTypeChange={setSelectedType}
+        sortBy={sortBy}
+        onSetSortByChange={setSortBy}
+      />
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         {isLoading
           ? Array(20)
