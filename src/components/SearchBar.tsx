@@ -1,4 +1,3 @@
-import { Search } from "lucide-react";
 import { Input } from "~/components/ui/input";
 import {
   Select,
@@ -34,7 +33,6 @@ export default function SearchBar({
         onChange={(e) => onSearchTermChange(e.target.value)}
         className="h-12 rounded-none border-2 border-black pl-10 text-lg"
       />
-      <Search className="absolute left-3 top-1/2 h-6 w-6 -translate-y-1/2 transform text-black" />
 
       <div className="flex gap-2">
         <Select value={selectedType} onValueChange={onSelectTypeChange}>
