@@ -35,23 +35,8 @@
   <pre><code>npm run dev</code></pre>
   <p>Open your browser and visit <a href="http://localhost:3000">http://localhost:3000</a>.</p>
 
-  <h2>Screenshots</h2>
-  <p><strong>Pokédex Screenshot:</strong><br>Example of the Pokédex in action.</p>
-
   <h2>Contributing</h2>
   <p>Contributions are welcome! If you'd like to improve this project, feel free to open an issue or submit a pull request.</p>
-
-  <h2>License</h2>
-  <p>This project is licensed under the MIT License. See the LICENSE file for details.</p>
-
-  <h2>Why This Works:</h2>
-  <ul>
-    <li><strong>Clear and Concise:</strong> The description is short but covers all the essential details.</li>
-    <li><strong>Highlights Key Features:</strong> It emphasizes what makes your project unique and useful.</li>
-    <li><strong>Easy to Follow:</strong> The "How to Run Locally" section provides clear instructions for others to try your project.</li>
-    <li><strong>Visual Appeal:</strong> Adding a screenshot or GIF makes the README more engaging.</li>
-    <li><strong>Encourages Contributions:</strong> The "Contributing" section invites others to collaborate.</li>
-  </ul>
 
   <p>Feel free to customize it further to match your project’s style! 😊</p>
 </body>
