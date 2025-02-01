@@ -26,23 +26,18 @@ export default function SearchBar({
   onSetSortByChange,
 }: SearchBarProps) {
   return (
-    <main>
-      <div className="relative mb-6">
-        <Input
-          type="text"
-          placeholder="Search Pokémon"
-          value={searchTerm}
-          onChange={(e) => onSearchTermChange(e.target.value)}
-          className="h-12 rounded-none border-2 border-black pl-10 text-lg"
-        />
-        <Search className="absolute left-3 top-1/2 h-6 w-6 -translate-y-1/2 transform text-black" />
-      </div>
+    <main className="mb-6 flex w-full flex-col gap-4 md:flex-row">
+      <Input
+        type="text"
+        placeholder="Search Pokémon"
+        value={searchTerm}
+        onChange={(e) => onSearchTermChange(e.target.value)}
+        className="h-12 rounded-none border-2 border-black pl-10 text-lg"
+      />
+      <Search className="absolute left-3 top-1/2 h-6 w-6 -translate-y-1/2 transform text-black" />
 
       <div className="flex gap-2">
-        <Select
-          value={selectedType}
-          onValueChange={onSelectTypeChange}
-        >
+        <Select value={selectedType} onValueChange={onSelectTypeChange}>
           <SelectTrigger className="h-12 w-[180px] rounded-none border-2 border-black">
             <SelectValue placeholder="Filter by type" />
           </SelectTrigger>
