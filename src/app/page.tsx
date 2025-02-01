@@ -5,10 +5,7 @@ import PokemonCard from "~/components/PokemonCard";
 import PokemonDetailsDialog from "~/components/PokemonDetailsDialog";
 import SearchBar from "~/components/SearchBar";
 import type { Pokemon } from "~/interfaces/Pokemon";
-import type {
-  PokemonDetails,
-  PokemonListResponse,
-} from "~/interfaces/PokemonListResponse";
+import type { PokemonListResponse } from "~/interfaces/PokemonListResponse";
 
 export default function HomePage() {
   const [allPokemon, setAllPokemon] = useState<Pokemon[]>([]);
@@ -28,12 +25,23 @@ export default function HomePage() {
 
         const data = (await response.json()) as PokemonListResponse;
 
-        const pokemonDetails: PokemonDetails[] = await Promise.all(
+        const pokemonDetails: Pokemon[] = await Promise.all(
           data.results.map(async (pokemon) => {
             const res = await fetch(pokemon.url);
             if (!res.ok)
               throw new Error(`Failed to fetch details for ${pokemon.name}`);
-            return res.json() as Promise<PokemonDetails>;
+
+            const fullPokemon = (await res.json()) as Pokemon; // Ensure it's a `Pokemon`
+            return {
+              id: fullPokemon.id,
+              name: fullPokemon.name,
+              types: fullPokemon.types,
+              sprites: fullPokemon.sprites,
+              height: fullPokemon.height,
+              weight: fullPokemon.weight,
+              abilities: fullPokemon.abilities,
+              stats: fullPokemon.stats,
+            };
           }),
         );
 
