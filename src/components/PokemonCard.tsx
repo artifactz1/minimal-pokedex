@@ -1,4 +1,3 @@
-import Image from "next/image";
 import type { Pokemon } from "../interfaces/Pokemon";
 
 interface PokemonCardProps {
@@ -31,7 +30,7 @@ export default function PokemonCard({ pokemon, onClick }: PokemonCardProps) {
             </span>
           ))}
         </div>
-        <div className="grid grid-cols-3 gap-1 text-sm">
+        <div className="flex w-full justify-between gap-1 text-sm">
           {pokemon.stats.slice(0, 3).map((stat) => (
             <div
               key={stat.stat.name}
