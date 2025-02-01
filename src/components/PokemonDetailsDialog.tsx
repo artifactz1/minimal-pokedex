@@ -1,4 +1,5 @@
 import { Grid, IdCard, Maximize, Minimize, X } from "lucide-react";
+import Image from "next/image";
 import {
   Dialog,
   DialogContent,
@@ -29,9 +30,11 @@ export default function PokemonDetailsDialog({
         <div className="p-6">
           <div className="grid grid-cols-2 gap-6">
             <div className="relative aspect-square overflow-hidden border-2 border-black">
-              <img
+              <Image
                 src={pokemon.sprites.front_default}
                 alt={pokemon.name}
+                layout="fill"
+                objectFit="contain"
                 className="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 transform object-contain"
               />
             </div>

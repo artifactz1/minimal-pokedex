@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Pokemon } from "../interfaces/Pokemon";
 
 interface PokemonCardProps {
@@ -6,17 +7,27 @@ interface PokemonCardProps {
 }
 
 export default function PokemonCard({ pokemon, onClick }: PokemonCardProps) {
+  // Fallback image in case the Pokémon image is missing
+  const imageUrl = pokemon.sprites.front_default || "/placeholder.png";
+
   return (
     <div
       className="cursor-pointer border-2 border-black bg-white transition-shadow duration-300 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
       onClick={() => onClick(pokemon)}
     >
       <div className="relative aspect-square overflow-hidden border-b-2 border-black">
-        <img
-          src={pokemon.sprites.front_default}
-          alt={pokemon.name}
-          className="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 transform object-contain"
-        />
+        {pokemon.sprites.front_default ? (
+          <Image
+            src={imageUrl}
+            alt={pokemon.name}
+            layout="fill"
+            objectFit="contain"
+          />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center bg-gray-200">
+            <span className="text-sm text-gray-500">No Image</span>
+          </div>
+        )}
       </div>
       <div className="p-4">
         <h2 className="mb-2 text-xl font-bold capitalize">{pokemon.name}</h2>

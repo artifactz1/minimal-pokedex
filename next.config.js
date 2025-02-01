@@ -5,6 +5,10 @@
 import "./src/env.js";
 
 /** @type {import("next").NextConfig} */
-const config = {};
+const config = {
+  images: {
+    domains: ["raw.githubusercontent.com", "pokeapi.co"], // Add domains used for Pokémon images
+  },
+};
 
 export default config;
