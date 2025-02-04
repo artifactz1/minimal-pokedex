@@ -6,7 +6,7 @@
   <h1><a href="https://minimal-pokedex.artifactz.dev/">Minimal Pokédex</a></h1>
   <p>A sleek and minimal Pokédex app built with React and TypeScript, designed to showcase the first 151 Pokémon from the Kanto region. This project fetches data from the PokeAPI and provides a clean, responsive interface for browsing Pokémon details.</p>
 
-  ![Alt text](https://raw.githubusercontent.com/artifactz1/minimal-pokedex/refs/heads/master/Pokedex.png?token=GHSAT0AAAAAAC6HDCU3VBWRUHPTF5EHVXRMZ46JUDA)
+  ![Alt text](https://raw.githubusercontent.com/artifactz1/minimal-pokedex/refs/heads/master/Pokedex.png)
 
 https://minimal-pokedex.artifactz.dev/
   
