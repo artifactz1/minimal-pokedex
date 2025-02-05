@@ -35,7 +35,7 @@ export default function PokemonDetailsDialog({
                 alt={pokemon.name}
                 layout="fill"
                 objectFit="contain"
-                className="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 transform object-contain"
+                className="absolute h-full w-full transform object-contain"
               />
             </div>
             <div>
