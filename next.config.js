@@ -7,7 +7,8 @@ import "./src/env.js";
 /** @type {import("next").NextConfig} */
 const config = {
   images: {
-    domains: ["raw.githubusercontent.com", "pokeapi.co"], // Add domains used for Pokémon images
+    // Workers have no image optimizer; sprites (raw.githubusercontent.com, pokeapi.co) are served as-is.
+    unoptimized: true,
   },
 };
 
